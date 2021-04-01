@@ -1,5 +1,5 @@
 const button = document.querySelector('.container button');
-const jokeText = document.querySelector('.joke');
+const jokeText = document.querySelector('#joke');
 
 // button.addEventListener('click', getJoke);
 let jokeData
@@ -16,13 +16,10 @@ function getJoke (){
 })
 .then (data=>{
     jokeData=data;
-    console.log(jokeData)
     })
 
     const setUp = jokeData.setup;
     const punchLine = jokeData.punchline;
-    const para = document.createElement('p')
-    para.textContent = setUp + punchLine;
-    jokeText.appendChild(para)
+    jokeText.textContent = setUp + punchLine;
 
 }
