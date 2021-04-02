@@ -16,10 +16,10 @@ function getJoke (){
 })
 .then (data=>{
     jokeData=data;
-    })
-
     const setUp = jokeData.setup;
     const punchLine = jokeData.punchline;
     jokeText.textContent = setUp + punchLine;
+
+    })
 
 }
